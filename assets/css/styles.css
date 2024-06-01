@@ -223,86 +223,247 @@
 }
 
 
-section{
-    display:flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1em;
+/* LOGIN FALTA CAMBIAR COLORES Y AGREGAR UNA IMAGEN DE FONDO */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
 }
 
-section h1{
-    font-size: 3em;
+.login-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
-section h2{
-    text-align:center;
-    width: 100%;
-    margin-bottom: 1em;
-    font-size: 2.5em
+.login-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
 }
 
-section form{
-    padding: 1.5em;
-    display:flex;
-    flex-wrap: wrap;
-    max-width: 500px;
-    border-radius: 20px;
-    border: 2px solid rgba(0,0,0,.1);
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-section form label{
-    width: 100%;
-    padding: 0.2em;
-    margin-bottom: 0.5em;
+#loginForm label {
+  display: block;
+  font-size: 14px;
+  color: #666;
 }
 
-section form input{
-    width: 100%;
-    margin-bottom: 1em;
-    padding: 0.8em;
-    border-radius: 9px;
-    border: none;
-    outline-color: #003DFF;
-    background-color: #eee;
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-section form input[type='submit']{
-    margin-top: 1.5em;
-    background-color: #003DFF;
-    color: #fff;
-    font-family: var(--font-mono);
-    transition: var(--transition);
-} 
-
-section form input[type='submit']:active{
-    transform: scale(0.97);
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+  border-color: #ff416c;
+  outline: none;
 }
 
-section p{
-    margin-top: 1.5em;
+#loginForm input[type="submit"] {
+  background-color: #ff416c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
 
+#loginForm input[type="submit"]:hover {
+  background-color: #e63950;
+}
+
+.login-section p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-section p a {
+  color: #ff416c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Alertas*/
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  opacity: 0.9;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: black;
 }
 
 
-section p a{
-    text-decoration: none;
-    color: #003DFF;
+/* Registro Falta cambiar colores y poner foto de fondo */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
 }
 
+.signup-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
 
-/* Home */
+.signup-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
 
-section button{
-    background-color: #003DFF;
-    color: #fff;
-    font-family: var(--font-mono);
-    transition: var(--transition);
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 9px;
-    margin-top: 1.5em;
-    font-size: 1em;
+#signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#signupForm label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#signupForm input[type="text"]:focus,
+#signupForm input[type="email"]:focus,
+#signupForm input[type="password"]:focus {
+  border-color: #ff416c;
+  outline: none;
+}
+
+#signupForm input[type="submit"] {
+  background-color: #ff416c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#signupForm input[type="submit"]:hover {
+  background-color: #e63950;
+}
+
+.signup-section p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-section p a {
+  color: #ff416c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Alertas */
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  opacity: 0.9;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: black;
 }
